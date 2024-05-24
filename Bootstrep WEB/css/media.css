@@ -1,0 +1,126 @@
+@media (max-width:768px) {
+    .SliderTitle {
+        font-size: 12px !important;
+        padding: 5px 6px !important;
+    }
+
+    .SliderTxtLg {
+        font-size: 30px !important;
+    }
+
+    .SliderTxtsm {
+        font-size: 22px !important;
+    }
+
+    .Btn1 {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+    }
+
+    .playbtn>img {
+        width: 40px !important;
+    }
+    .infoshop p{
+        font-size: 10px !important;
+    }
+    #slider1.owl-carousel .owl-nav .owl-prev,
+    #slider1.owl-carousel .owl-nav .owl-next {
+        padding: 0px 0px !important;
+        font-size: 20px !important;
+    }
+    .boxcart{
+        font-size: 12px !important;
+    }
+    .boxrate {
+        font-size: 10px !important;
+    }
+    .Boxicon{
+        padding: 10px !important;
+        font-size: 14px !important;
+    }
+    .boxovertxt {
+        font-size: 16px !important;
+    }
+    .megatxt {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width:426px) {
+    .SliderTitle {
+        font-size: 8px !important;
+        padding: 4px 5px !important;
+    }
+
+    .SliderTxtLg {
+        font-size: 20px !important;
+    }
+
+    .SliderTxtsm {
+        font-size: 12px !important;
+    }
+
+    .Btn1 {
+        padding: 8px 12px !important;
+        font-size: 10px !important;
+    }
+
+    .playbtn {
+        display: none !important;
+        /* width: 20px !important; */
+    }
+
+    #slider1.owl-carousel .owl-nav {
+        top: 70px !important;
+    }
+
+    #slider1.owl-carousel .owl-nav .owl-prev,
+    #slider1.owl-carousel .owl-nav .owl-next {
+        padding: 0px 0px !important;
+        font-size: 20px !important;
+    }
+    .boxcart{
+        font-size: 12px !important;
+    }
+    .boxrate {
+        font-size: 7px !important;
+    }
+    .Boxicon{
+        padding: 10px !important;
+        font-size: 10px !important;
+    }
+    .boxovertxt {
+        font-size: 14px !important;
+    }
+    #Nav_Tab .nav-pills .nav-link {
+        font-size: 16px !important;
+    }
+    .megatxt {
+        font-size: 12px !important;
+    }
+}
+@media (max-width:375px){
+    
+
+    #slider1.owl-carousel .owl-nav .owl-prev,
+    #slider1.owl-carousel .owl-nav .owl-next {
+        padding: -10px 0px !important;
+        font-size: 16px !important;
+    }
+    .boxcart{
+        font-size: 10px !important;
+    }
+    .boxrate {
+        font-size: 7px !important;
+    }
+    .Boxicon{
+        padding: 5px !important;
+        font-size: 10px !important;
+    }
+    .boxovertxt {
+        font-size: 12px !important;
+    }
+    #Nav_Tab .nav-pills .nav-link {
+        font-size: 12px !important;
+    }
+}

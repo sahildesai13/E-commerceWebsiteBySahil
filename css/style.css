@@ -1,0 +1,704 @@
+/* font adding */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/josefin-sans-v26-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* font ADDIng ENDS */
+
+
+/* Css Starts */
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Josefin Sans';
+}
+
+body {
+    position: relative;
+}
+
+header {
+    position: absolute;
+    transition: 0.3s;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+header:hover {
+    background-color: rgb(20, 20, 20, 0.9);
+}
+
+:root {
+    --txtcolor: #fff;
+    --color: #000;
+    --bgcolor: #151515;
+    --bgcolor: #fff;
+    --color2: #666;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.item-top {
+    align-items: top;
+}
+
+.align-item {
+    align-items: center;
+}
+
+.sapce-bet {
+    justify-content: space-between;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+.relative {
+    position: relative;
+}
+
+.gap {
+    gap: 10px;
+}
+
+.spacery {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+a,
+li,
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+.unset {
+    position: unset !important;
+}
+
+a {
+    display: block;
+}
+
+.container {
+    width: 95%;
+    padding: 0 12px;
+    margin: auto;
+}
+
+.logo {
+    padding: 30px 30px 30px 10px;
+}
+
+header a {
+    color: var(--txtcolor);
+}
+
+.Menu {
+    padding: 25px 10px 30px 10px;
+    position: relative;
+}
+
+.MenuLink {
+    padding: 10px 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.MenuLink i {
+    font-size: 12px !important;
+    transition: 0.3s;
+    padding: 2px 2px;
+}
+
+.MenuLink::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    top: 100%;
+    left: 0;
+    transition: 0.5s;
+}
+
+.Menu:hover .MenuLink::after {
+    top: 0;
+}
+
+.MenuLink span {
+    position: relative;
+    color: var(--txtcolor);
+    z-index: 2;
+}
+
+.Menu:hover .MenuLink span {
+    color: var(--color);
+}
+
+.Menu:hover .MenuLink i {
+    color: var(--color) !important;
+    transform: rotate(180deg);
+}
+
+/* ================SubMenu Starts ================ */
+
+.subMenu {
+    position: absolute;
+    top: 100%;
+    background-color: var(--txtcolor);
+    width: 170px;
+    transform: scale(0);
+    transition: 0.3s;
+    padding: 10px;
+    z-index: 3;
+}
+
+.subMenu li a {
+    font-size: 14px;
+    color: var(--color2);
+    padding: 10px 5px;
+}
+
+.Menu:hover .subMenu {
+    transform: scale(1);
+}
+
+/* ================ Submenu Ends================== */
+
+/*-------------- Mega Menu  Starts--------------------------*/
+.Menu:hover .MegaMenu {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.MegaMenu {
+    position: absolute;
+    top: 100%;
+    padding: 20px;
+    left: 0;
+    padding: 2% 10%;
+    background-color: var(--txtcolor);
+    transform: scale(0);
+    visibility: hidden;
+    transition: 0.4s;
+    transform-origin: 10% 10%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.MegaSubMenu {
+    padding: 0 20px;
+    width: 20%;
+}
+
+.MegaSubMenux {
+    padding: 0 20px;
+    width: 30%;
+}
+
+.MegaSubMenu li a,
+.MegaSubMenu a,
+.MegaSubMenux a {
+    color: var(--color);
+    padding: 10px;
+}
+
+.MegaSubMenux a {
+    color: #666666;
+}
+
+.Menuimg,
+.Megaimg {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Menuimg img,
+.Megaimg img {
+    width: 100%;
+}
+
+.Menuimg::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 100%;
+    transition: 0.6s;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.Menuimg:hover::before {
+    left: 0%;
+    top: 0%;
+    background-color: transparent;
+
+}
+
+.Menuimg::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: -100%;
+    transition: 0.6s;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.Menuimg:hover::after {
+    left: 0%;
+    top: 0%;
+    background-color: transparent;
+}
+
+.Megaimg {
+    position: relative;
+}
+
+.priceMenu a {
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.Megaimg::before {
+    position: absolute;
+    background-image: url("../img/Mega3img3.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: 0.4s;
+}
+
+.Megaimg:hover::before {
+    left: 0;
+}
+
+.ShopImg2::before {
+    background-image: url("../img/Mega3img4.jpg");
+}
+
+.ShopImg3::before {
+    background-image: url("../img/Mega3img6.jpg");
+}
+
+.ShopImg4::before {
+    background-image: url("../img/Mega3img8.jpg");
+}
+
+/*-------------- Mega Menu ends--------------------------*/
+
+/* icon starts============================= */
+
+.contectIcon a i {
+    transition: 0.4s;
+    margin: 0 5px;
+}
+
+.contectIcon a:hover>i {
+    transform: rotateY(180deg);
+}
+
+/* icon Ends============================= */
+
+/* +++++++++++++++ Slider CSS Start ________________________ */
+
+#HomeSlider1.owl-theme .owl-nav {
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 3;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+#HomeSlider1.owl-theme .owl-nav .owl-next,
+#HomeSlider1.owl-theme .owl-nav .owl-prev {
+    padding: 15px 25px !important;
+    font-size: 30px !important;
+    border-radius: 50%;
+    border: 2px solid #ffd554;
+    color: #ffd554;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#HomeSlider1.owl-theme .owl-nav [class*=owl-]:hover {
+    background-color: transparent !important;
+}
+
+#HomeSlider1.owl-theme .owl-nav .owl-prev:hover span,
+#HomeSlider1.owl-theme .owl-nav .owl-next:hover span {
+    transition: 0.4s;
+    color: #000000;
+    z-index: 2;
+    position: relative;
+}
+
+#HomeSlider1 .owl-next::before,
+#HomeSlider1 .owl-prev::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #ffd554;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+#HomeSlider1.owl-theme .owl-nav .owl-next:hover::before,
+#HomeSlider1.owl-theme .owl-nav .owl-prev:hover::after {
+    top: 0% !important;
+}
+
+.sliderTxt,
+.sliderTxt2 {
+    position: absolute;
+    top: 38%;
+    left: 32%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.plybtn {
+    background-color: var(--txtcolor);
+    padding: 10px 12px;
+    border-radius: 50%;
+    margin: 10px 0;
+
+}
+
+
+.sliderTxt h5,
+.sliderTxt2 h5 {
+    background-color: #ffd554;
+    padding: 10px 12px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.sliderTxt h1,
+.sliderTxt h2,
+.sliderh1,
+.sliderTxt2 h2 {
+    color: var(--txtcolor);
+    margin: 25px;
+    font-size: 45px;
+}
+
+
+.sliderTxt h2,
+.sliderTxt2 h2 {
+    font-weight: 200;
+    margin: 0 !important;
+}
+
+.SlderBtn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #ffd554;
+    overflow: hidden;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    color: var(--color);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.SlderBtn span {
+    position: relative;
+    z-index: 2;
+}
+
+.SlderBtn:hover>span {
+    transition: 0.3s;
+    color: var(--txtcolor);
+}
+
+.SlderBtn:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #666666;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.SlderBtn:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.sliderTxt2 {
+    left: 15%;
+}
+
+/* +++++++++++++++ Slider CSS  ends________________________ */
+
+/* ===================== BRANDS STARTS ==================== */
+
+.BrandImg {
+    opacity: 0.8;
+    transition: 0.4s;
+    margin: 20px 0;
+}
+
+.BrandImg:hover {
+    opacity: 1;
+}
+
+/* ===================== BRANDS ENDS ==================== */
+
+
+/* ===================== CATEGORY STARTS ==================== */
+
+.heading {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.heading h2 {
+    padding: 20px 0 0 0;
+    font-size: 45px;
+}
+
+.sliderContainer {
+    width: 85%;
+    margin: auto;
+}
+
+.imgPart1 {
+    overflow: hidden;
+}
+
+.imgSubpart {
+    margin: 20px;
+    overflow: hidden;
+    height: 50%;
+    transition: 1s;
+    position: relative;
+}
+
+.imgSubpart img {
+    object-fit: cover;
+    height: 100%;
+    transition: 2s;
+
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.imgSubpart:hover>img {
+    transform: scale(1.05);
+}
+
+.overtext {
+    position: absolute;
+    background-color: var(--txtcolor);
+    font-weight: 550;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.lastXT {
+    bottom: 20%;
+}
+
+.overtext p {
+    padding: 10px;
+    position: relative;
+}
+
+.overtext p span {
+    position: relative;
+    z-index: 3;
+    transition: 0.3s;
+
+}
+
+.overtext p:hover>span {
+    color: var(--txtcolor);
+}
+
+.overtext p:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #131313;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    right: 0;
+    top: 0;
+}
+
+.overtext p:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+#Slider2.owl-carousel button.owl-dot.active span
+,#Slider3.owl-carousel button.owl-dot.active span {
+    background-color: #333333 !important;
+    transition: 0.4s;
+    padding: 0 8px !important;
+}
+
+/* ===================== CATEGORY ENDS ==================== */
+
+/* ===================== PRODUCT STARTS ==================== */
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+}
+
+.imgBox {
+    width: 100%;
+}
+
+.imgBox img {
+    width: 100%;
+}
+.heading p{
+    justify-content: center;
+
+}
+.heading p span {
+    font-size: 25px;
+    padding: 0 25px;
+    position: relative;
+}
+.heading p span a{
+    color: #000;
+}
+
+.heading p span::after {
+    position: absolute;
+    content: '';
+    /* top: 0; */
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 10%;
+    transition: 0.4s;
+    background-color: #000;
+}
+
+.heading p span::before {
+    position: absolute;
+    content: '';
+    /* top: 0; */
+    bottom: 0;
+    right: 50%;
+    width: 0%;
+    height: 10%;
+    transition: 0.4s;
+
+    background-color: #000;
+}
+
+.heading p span:hover::after,
+.heading p span:hover::before {
+    width: 15%;
+    bottom: -10px;
+}
+.imgBox .ProductTXT{
+    /* padding: 15px !important; */
+    /* line-height: 1.5; */
+    text-align: center;
+}
+.shopdots{
+
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.shopdots span{
+    border-radius: 50% !important; 
+    border: 0;
+    height: 10px;
+    width: 10px;
+    display: block;
+    background-color: #000000 ;
+    text-align: center;
+    border: 1px solid black !important;
+    margin: 10px 0;
+}
+.dot2{
+    border: 1px solid black !important;
+    background-color: white !important;
+}
+
+/* ===================== PRODUCT ENDS ==================== */
+
+/* ============== OWNER SLIDER  STARTS ================== */
+.OwnerSlider
+{
+    background-image: url('../img/parallax.jpg');
+    background-size: 100%;
+    padding: 50px 100px;0
+     color: var(--txtcolor);
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    line-height: 2;
+}
+.OwnerSlider .items .Item-dtl{
+    padding: 30px 30px 50px 30px;
+} 
+.ownerLogo img{
+    width: 100px !important;
+    margin: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.ownerNAME h5{
+    padding: 20px 0 0 0 ;
+    line-height: 1.7 !important;
+    font-style: normal !important;
+    color: #ffd554;
+
+}
+.ownerNAME p{
+    font-size: 14px !important;
+}
+/* ============== OWNER SLIDER  ENDS ================== */
